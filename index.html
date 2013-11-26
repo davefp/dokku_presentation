@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Build Your Own PaaS with Dokku</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css" media="screen">
+            @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+      body {
+        font-family: 'Droid Serif';
+        font-size: 32px;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.5em; }
+      h3 { font-size: 1.2em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 5px;
+        -web-border-radius: 5px;
+        background: #e7e8e2;
+        border-radius: 5px;
+        font-size: 32px;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 2em;
+      }
+
+      .small {
+        font-size: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Build Your Own PaaS with Dokku
+[http://theflyingdeveloper.com/dokku_presentation]()
+
+???
+
+Tired of waiting 30 seconds for your free Heroku dyno to load?
+
+Time to build your own PaaS, obviously
+
+---
+
+class: center, middle
+
+![](homepage-docker-logo.png)
+
+*"An open source project to pack, ship and run any application as a lightweight container"*
+
+???
+
+Docker is incredibly powerful, but also very deep
+
+Difficult to get your head around in one go
+
+---
+
+class: center
+
+.pull-left[
+![](vms.jpg)
+]
+
+.pull-right[
+![](containers.jpg)
+]
+
+[Images from Linux Journal](http://www.linuxjournal.com/content/containers%E2%80%94not-virtual-machines%E2%80%94are-future-cloud)
+
+---
+
+class: middle, center
+
+# Docker + Heroku = Dokku
+
+*"Docker powered mini-Heroku. The smallest PaaS implementation you’ve ever seen."*
+
+???
+
+Dokku is a Heroku-like PaaS written in shell script
+
+It strings together Docker, Buildpacks/Buildstep, pluginhook
+
+Upshot is, you can throw it on a VPS and deploy apps to it using git
+
+---
+
+.center[
+# Thanks!
+]
+
+.pull-left[
+## References
+
+* [Dokku Source Code](https://github.com/progrium/dokku)
+
+* [Original Dokku Blog Post](http://progrium.com/blog/2013/06/19/dokku-the-smallest-paas-implementation-youve-ever-seen/)
+
+* [Flynn](http://flynn.io)
+
+* This slideshow was built using [Remark](http://remarkjs.com), which kicks butt.
+
+]
+.pull-right[
+## Me
+
+* [The Flying Developer Blog](http://theflyingdeveloper.com)
+
+* [@davefp](http://twitter.com/davefp)
+]
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        highlightLanguage: 'ruby',
+        highlightStyle: 'github',
+        ratio: '16:9'
+      });
+    </script>
+  </body>
+</html>
