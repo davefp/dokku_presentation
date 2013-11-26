@@ -119,6 +119,12 @@
       .small {
         font-size: 50%;
       }
+
+      .really-big {
+        font-size: 16em;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+      }
     </style>
   </head>
   <body>
@@ -145,6 +151,8 @@ class: center, middle
 
 ???
 
+LXC: lightweight linux container
+
 Docker is incredibly powerful, but also very deep
 
 Difficult to get your head around in one go
@@ -163,6 +171,16 @@ class: center
 
 [Images from Linux Journal](http://www.linuxjournal.com/content/containers%E2%80%94not-virtual-machines%E2%80%94are-future-cloud)
 
+???
+
+VMs recreate the entire OS stack: App, binaries, libs, kernal, etc.
+
+Containers layer apps on top of existing infrastructure
+
+Common kernal, share libs where possible, sandbox otherwise
+
+Containers pack just enough to run your app, nothing more
+
 ---
 
 class: middle, center
@@ -178,6 +196,48 @@ Dokku is a Heroku-like PaaS written in shell script
 It strings together Docker, Buildpacks/Buildstep, pluginhook
 
 Upshot is, you can throw it on a VPS and deploy apps to it using git
+
+---
+
+# 5-step setup
+
+1. Set up a VPS on your favourite service (mine's [DigitalOcean](https://www.digitalocean.com/?refcode=fd2b085e4355))
+
+2. Install Dokku on your server (bash one-liner)
+
+3. Point a domain at your VPS. Each app will be deployed on a subdomain.
+
+4. Add your ssh key to dokku
+
+5. Deploy!
+
+[In-depth guide here](http://theflyingdeveloper.com/host-and-deploy-your-next-rails-project-with-dokku/)
+
+---
+
+class: center, middle
+
+#What's next?
+
+---
+
+class: center, middle
+
+.really-big[
+Flynn
+]
+
+???
+
+Flynn is being built by Jeff Lindsay (Dokku), Jonathan Rudenberg, and Daniel Siders
+
+Designed to run private PaaS at the enterprise level
+
+Open Source
+
+Currently in development
+
+February release
 
 ---
 
